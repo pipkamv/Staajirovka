@@ -1,0 +1,14 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Добро пожаловать на наш сайт </h1>
+    <h2>Вы успешно создали новый аккаунт и теперь мы знаем где ты живешь {{ user_form.username }}</h2>
+    <h2><a href="{% url 'login' %}">Войдите</a> что бы продолжить</h2>
+</body>
+</html>

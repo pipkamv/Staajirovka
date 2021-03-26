@@ -1,0 +1,19 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post" action=".">
+        {% csrf_token %}
+        {% bootstrap_form user_form layout='horizontal' %}
+
+        <p><input type="submit" value="Создать новый аккаунт"></p>
+    </form>
+</body>
+</html>
+
+

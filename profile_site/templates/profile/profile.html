@@ -1,0 +1,24 @@
+{%load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <h1>Ваш профиль {{ user.username }}</h1>
+    <table>
+        <tr><td>Имя:</td>               <td></td><td>{{ user.first_name }}</td></tr>
+        <tr><td>Фамилия:</td>           <td></td><td>{{ user.last_name }}</td></tr>
+        <tr><td>Отчество:</td>          <td></td><td>{{ user.patronymic }}</td></tr>
+        <tr><td>Емайл:</td>             <td></td><td>{{ user.email }}</td></tr>
+        <tr><td>Номер телефона:</td>    <td></td><td>{{ user.phone_number }}</td></tr>
+        <tr><td>Адрес:</td>             <td></td><td>{{ user.address }}</td></tr>
+        <tr><td>ИНН:</td>               <td></td><td>{{ user.inn }}</td></tr>
+    </table>
+    <a href="{% url 'profile:edit' %}">Редактировать профиль</a><br>
+    <a href="{% url 'logout' %}">Выйти</a><br>
+    <a href="{% url 'admin:index'%}">Админ</a>
+</body>
+</html>
